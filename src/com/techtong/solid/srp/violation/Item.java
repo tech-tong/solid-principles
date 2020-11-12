@@ -1,4 +1,4 @@
-package com.techtong.solid.srp;
+package com.techtong.solid.srp.violation;
 
 public class Item {
     private String name;

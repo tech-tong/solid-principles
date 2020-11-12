@@ -1,4 +1,4 @@
-package com.techtong.solid.srp;
+package com.techtong.solid.srp.violation;
 
 import java.util.List;
 
@@ -10,6 +10,7 @@ public class Main {
         Item tShirt = new Item("Mask", 20.0);
 
         int plasticBagTaken = 2;
+        int tax = 10;
 
         var itemsPurchased = List.of(cleanCodeBook, mask, tShirt);
 
@@ -18,7 +19,7 @@ public class Main {
                 itemsPurchased,
                 plasticBagTaken);
 
-        double totalPriceOfItems = uncleBob.calculatePrice(10.00);
+        double totalPriceOfItems = uncleBob.calculatePrice(tax);
 
         System.out.println("Total Prices of items purchased : " + totalPriceOfItems);
 

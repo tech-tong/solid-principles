@@ -1,4 +1,4 @@
-package com.techtong.solid.srp;
+package com.techtong.solid.srp.violation;
 
 import java.util.List;
 
@@ -60,43 +60,4 @@ public class Customer {
         }
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public List<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
-
-    public int getNumberOfPlasticBags() {
-        return numberOfPlasticBags;
-    }
-
-    public void setNumberOfPlasticBags(int numberOfPlasticBags) {
-        this.numberOfPlasticBags = numberOfPlasticBags;
-    }
-
-    public double getPlasticBagPrice() {
-        return plasticBagPrice;
-    }
-
-    public void setPlasticBagPrice(double plasticBagPrice) {
-        this.plasticBagPrice = plasticBagPrice;
-    }
 }
