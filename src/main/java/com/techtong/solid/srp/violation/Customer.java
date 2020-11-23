@@ -3,10 +3,10 @@ package com.techtong.solid.srp.violation;
 import java.util.List;
 
 public class Customer {
-    private String name;
-    private int age;
-    private List<Item> items;
-    private int numberOfPlasticBags;
+    private final String name;
+    private final int age;
+    private final List<Item> items;
+    private final int numberOfPlasticBags;
     private double plasticBagPrice = 2.00;
 
     public Customer(String name, int age, List<Item> items, int numberOfPlasticBags) {
