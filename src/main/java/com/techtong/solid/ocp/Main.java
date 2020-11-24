@@ -13,16 +13,16 @@ public class Main {
 
     public static void main(String[] args) {
         List<Product> productList = List.of(
-                new Product("Mobile Phone", 1000, ProductCategory.ELECTRONICS),
+                new Product("Headphones", 1000, ProductCategory.ELECTRONICS),
                 new Product("Chanachur", 100, ProductCategory.FOOD)
 //                new Product("Shampoo", 50, ProductCategory.HEALTH_LIFESTYLE),
 //                new Product("Rolex", 10000, ProductCategory.LUXURY)
         );
 
-        ITaxCalculationService s1 = new BadTaxCalculationService();
-        ITaxCalculationService s2 = new DecentTaxCalculationService(new TaxCalculationUtil());
+//        TaxCalculationService badTaxCalculationService = new BadTaxCalculationService();
+        TaxCalculationService decentTaxCalculationService = new DecentTaxCalculationService(new TaxCalculationUtil());
 
-        Invoice invoice = new InvoiceService(s2).getInvoice(productList);
+        Invoice invoice = new InvoiceService(decentTaxCalculationService).getInvoice(productList);
 
         System.out.println("Subtotal : " + invoice.getSubtotalAmount());
         System.out.println("Tax      : " + invoice.getTaxAmount());

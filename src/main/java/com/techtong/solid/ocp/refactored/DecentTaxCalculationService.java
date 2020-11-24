@@ -1,11 +1,11 @@
 package com.techtong.solid.ocp.refactored;
 
-import com.techtong.solid.ocp.ITaxCalculationService;
+import com.techtong.solid.ocp.TaxCalculationService;
 import com.techtong.solid.ocp.models.Product;
 
 import java.util.List;
 
-public class DecentTaxCalculationService implements ITaxCalculationService {
+public class DecentTaxCalculationService implements TaxCalculationService {
     private final TaxCalculationUtil taxCalculationUtil;
 
     public DecentTaxCalculationService(TaxCalculationUtil taxCalculationUtil) {

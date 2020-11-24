@@ -7,9 +7,9 @@ import java.util.List;
 
 public class InvoiceService {
 
-    private final ITaxCalculationService taxCalculationService;
+    private final TaxCalculationService taxCalculationService;
 
-    public InvoiceService(ITaxCalculationService taxCalculationService) {
+    public InvoiceService(TaxCalculationService taxCalculationService) {
         this.taxCalculationService = taxCalculationService;
     }
 
