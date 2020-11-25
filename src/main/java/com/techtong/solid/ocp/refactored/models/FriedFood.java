@@ -7,6 +7,6 @@ public class FriedFood extends FoodItem {
 
     @Override
     public void prepare() {
-
+        System.out.println("====> Frying " + this.getName());
     }
 }

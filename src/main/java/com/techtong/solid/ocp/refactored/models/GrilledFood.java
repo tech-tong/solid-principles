@@ -7,6 +7,6 @@ public class GrilledFood extends FoodItem {
 
     @Override
     public void prepare() {
-
+        System.out.println("====> Grilling " + this.getName());
     }
 }

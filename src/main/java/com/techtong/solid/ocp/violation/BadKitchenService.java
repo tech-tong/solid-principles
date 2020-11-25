@@ -6,15 +6,15 @@ import com.techtong.solid.ocp.violation.models.GrilledFood;
 
 import java.util.List;
 
-public class BadKitchenService implements KitchenService {
+public class BadKitchenService {
     public void prepareItems(List<FoodItem> foodItems) {
         for (final FoodItem foodItem : foodItems) {
             if (foodItem instanceof GrilledFood) {
-                System.out.println("grilling " + foodItem.getName());
+                System.out.println("---> Grilling " + foodItem.getName());
             }
 
             if (foodItem instanceof FriedFood) {
-                System.out.println("frying " + foodItem.getName());
+                System.out.println("---> Frying " + foodItem.getName());
             }
         }
     }

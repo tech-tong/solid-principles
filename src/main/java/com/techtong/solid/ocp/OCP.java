@@ -9,12 +9,15 @@ import java.util.List;
 
 public class OCP {
     public static void main(String[] args) {
-        BadKitchenService kitchenService = new BadKitchenService();
 
         List<FoodItem> foodItems = List.of(
                 new GrilledFood("steak"),
                 new FriedFood("chicken")
         );
+
+        BadKitchenService kitchenService = new BadKitchenService();
+
+        System.out.println("Preparing Items:");
         kitchenService.prepareItems(foodItems);
     }
 }
