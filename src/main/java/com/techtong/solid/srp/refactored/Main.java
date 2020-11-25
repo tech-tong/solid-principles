@@ -16,9 +16,6 @@ public class Main {
 
         List<Item> itemsPurchased = List.of(cleanCodeBook, mask, tShirt);
 
-        Customer uncleBob = new Customer("Robert C Martin",
-                68);
-
         ItemPriceCalculationService itemPriceCalculation = new ItemPriceCalculationService();
 
         double totalPriceOfItems = itemPriceCalculation.calculateItemPrice(itemsPurchased,

@@ -1,13 +1,13 @@
 package com.techtong.solid.srp.refactored.pricecalculation;
 
-import com.techtong.solid.srp.refactored.logger.Logger;
 import com.techtong.solid.srp.refactored.Item;
+import com.techtong.solid.srp.refactored.logger.Logger;
 
 import java.util.List;
 
 public class ItemPriceCalculationService {
     private double plasticBagPrice = 2.0;
-    private TaxCalculationService taxCalculationService = new TaxCalculationService();
+    private final TaxCalculationService taxCalculationService = new TaxCalculationService();
 
     public double calculateItemPrice(List<Item> items,
                                      int numberOfPlasticBags,
@@ -15,7 +15,7 @@ public class ItemPriceCalculationService {
         double itemPrices = getTotalItemPrices(items);
         calculatePlasticBagPrice(items.size());
 
-        double totalTax = taxCalculationService.calculateTax(itemPrices,tax);
+        double totalTax = taxCalculationService.calculateTax(itemPrices, tax);
 
         double totalPrice = itemPrices + totalTax + numberOfPlasticBags * plasticBagPrice;
         Logger.info("Total Price of the items -> " + totalPrice);
