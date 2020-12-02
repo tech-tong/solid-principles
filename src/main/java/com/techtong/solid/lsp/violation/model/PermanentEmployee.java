@@ -7,8 +7,8 @@ public class PermanentEmployee extends Employee{
     }
 
     @Override
-    public double getMinimumSalary() {
-        return 1000;
+    public boolean isEligibleForInsurance() {
+        return false;
     }
 
     @Override

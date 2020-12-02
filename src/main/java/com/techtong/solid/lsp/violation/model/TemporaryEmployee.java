@@ -7,8 +7,8 @@ public class TemporaryEmployee extends Employee{
     }
 
     @Override
-    public double getMinimumSalary() {
-        return 500;
+    public boolean isEligibleForInsurance() {
+        return false;
     }
 
     @Override

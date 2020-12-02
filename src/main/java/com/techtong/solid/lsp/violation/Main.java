@@ -21,7 +21,7 @@ public class Main {
 
         for( Employee employee : employees ) {
 
-            System.out.println("Employee ID: " + employee.getId() + " Employee Name : " + employee.getName() + " Employee minimum Salary : " + employee.getMinimumSalary());
+            System.out.println("Employee ID: " + employee.getId() + " Employee Name : " + employee.getName() + " - Employee is eligible for Insurance : "  + employee.isEligibleForInsurance());
         }
 
         System.out.println("--------------------");

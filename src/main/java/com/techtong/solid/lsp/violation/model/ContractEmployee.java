@@ -7,8 +7,8 @@ public class ContractEmployee extends Employee{
     }
 
     @Override
-    public double getMinimumSalary() {
-        return 200;
+    public boolean isEligibleForInsurance() {
+        return false;
     }
 
     @Override

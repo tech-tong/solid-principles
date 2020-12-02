@@ -17,6 +17,6 @@ public abstract class Employee {
         this.name = name;
     }
     public abstract double calculateBonus(float salary);
-    public abstract double getMinimumSalary();
+    public abstract boolean isEligibleForInsurance();
 }
 
