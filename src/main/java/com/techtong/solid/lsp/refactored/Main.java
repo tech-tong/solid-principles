@@ -33,7 +33,7 @@ public class Main {
 
         for( IEmployee employee : employeesOnly ){
             try {
-                System.out.println(employee.toString() + " Employee Bonus : " + employee.getMinimumSalary());
+                System.out.println(employee.toString() + " Employee is eligible for Insurance : " + employee.isEligibleForInsurance());
             }catch (UnsupportedOperationException exception) {
                 LOGGER.log(Level.SEVERE, " This employee is not eligible for bonus");
             }

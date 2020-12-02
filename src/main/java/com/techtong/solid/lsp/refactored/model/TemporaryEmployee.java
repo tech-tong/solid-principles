@@ -11,8 +11,7 @@ public class TemporaryEmployee extends Employee implements EmployeeBonusEligible
         return  salary * .05;
     }
 
-    @Override
-    public double getMinimumSalary() {
-        return 500;
+    public boolean isEligibleForInsurance() {
+        return false;
     }
 }

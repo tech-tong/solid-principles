@@ -13,7 +13,7 @@ public class PermanentEmployee extends Employee implements EmployeeBonusEligible
     }
 
     @Override
-    public double getMinimumSalary() {
-        return 1000;
+    public boolean isEligibleForInsurance() {
+        return true;
     }
 }
