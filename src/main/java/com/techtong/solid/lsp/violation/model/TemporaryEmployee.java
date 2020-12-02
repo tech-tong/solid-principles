@@ -7,7 +7,12 @@ public class TemporaryEmployee extends Employee{
     }
 
     @Override
-    public double calculate_bonus(float salary) {
+    public double getMinimumSalary() {
+        return 500;
+    }
+
+    @Override
+    public double calculateBonus(float salary) {
         return  salary * .05;
     }
 }

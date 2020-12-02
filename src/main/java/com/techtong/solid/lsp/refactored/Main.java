@@ -12,13 +12,13 @@ public class Main {
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME) ;
 
     public static void main(String[] args){
-        List<Employee> employees = new ArrayList<>();
+        List<EmployeeBonusEligible> employees = new ArrayList<>();
         employees.add( new PermanentEmployee(1, "Sabbir"));
         employees.add( new TemporaryEmployee(2, "Sazzad"));
 
-        for( Employee employee : employees ){
+        for( EmployeeBonusEligible employee : employees ){
             try {
-                System.out.println("Employee ID: " + employee.getId() + " Employee Name : " + employee.getName() + " Employee Bonus : " + employee.calculateBonus(1000));
+                System.out.println(employee.toString() + " Employee Bonus : " + employee.calculateBonus(1000));
             }catch (UnsupportedOperationException exception) {
              LOGGER.log(Level.SEVERE, " This employee is not eligible for bonus");
             }
@@ -29,7 +29,7 @@ public class Main {
 
         employeesOnly.add( new PermanentEmployee(1, "Sabbir"));
         employeesOnly.add( new TemporaryEmployee(2, "Sazzad"));
-        employeesOnly.add( new ContractEmployee(3, "Abc"));
+        employeesOnly.add( new ContractEmployee(3, "Abcdef"));
 
         for( IEmployee employee : employeesOnly ){
             try {

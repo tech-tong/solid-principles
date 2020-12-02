@@ -16,6 +16,7 @@ public abstract class Employee {
         this.id = id;
         this.name = name;
     }
-    public abstract double calculate_bonus( float salary);
+    public abstract double calculateBonus(float salary);
+    public abstract double getMinimumSalary();
 }
 

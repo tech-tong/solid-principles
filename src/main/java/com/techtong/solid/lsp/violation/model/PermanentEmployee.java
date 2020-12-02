@@ -7,7 +7,12 @@ public class PermanentEmployee extends Employee{
     }
 
     @Override
-    public double calculate_bonus(float salary) {
+    public double getMinimumSalary() {
+        return 1000;
+    }
+
+    @Override
+    public double calculateBonus(float salary) {
         return  salary * .1;
     }
 }

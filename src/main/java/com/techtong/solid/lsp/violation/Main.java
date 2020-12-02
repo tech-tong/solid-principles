@@ -1,5 +1,6 @@
 package com.techtong.solid.lsp.violation;
 
+import com.techtong.solid.lsp.violation.model.ContractEmployee;
 import com.techtong.solid.lsp.violation.model.Employee;
 import com.techtong.solid.lsp.violation.model.PermanentEmployee;
 import com.techtong.solid.lsp.violation.model.TemporaryEmployee;
@@ -16,13 +17,20 @@ public class Main {
         List<Employee> employees = new ArrayList<>();
         employees.add( new PermanentEmployee(1, "Sabbir"));
         employees.add( new TemporaryEmployee(2, "Sazzad"));
-//        employees.add( new ContractEmployee(3, "Abc"));
+        employees.add( new ContractEmployee(3, "Abc"));
+
+        for( Employee employee : employees ) {
+
+            System.out.println("Employee ID: " + employee.getId() + " Employee Name : " + employee.getName() + " Employee minimum Salary : " + employee.getMinimumSalary());
+        }
+
+        System.out.println("--------------------");
 
         for( Employee employee : employees ){
             try {
-                System.out.println("Employee ID: " + employee.getId() + " Employee Name : " + employee.getName() + " Employee Bonus : " + employee.calculate_bonus(1000));
+                System.out.println("Employee ID: " + employee.getId() + " Employee Name : " + employee.getName() + " Employee Bonus : " + employee.calculateBonus(1000));
             }catch (UnsupportedOperationException exception) {
-             LOGGER.log(Level.SEVERE, " This employee is not eligible for bonus");
+                LOGGER.log(Level.SEVERE, " This employee is not eligible for bonus");
             }
         }
     }

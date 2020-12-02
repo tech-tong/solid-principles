@@ -7,7 +7,12 @@ public class ContractEmployee extends Employee{
     }
 
     @Override
-    public double calculate_bonus(float salary) {
+    public double getMinimumSalary() {
+        return 200;
+    }
+
+    @Override
+    public double calculateBonus(float salary) {
         throw new UnsupportedOperationException("Not implemented");
     }
 }

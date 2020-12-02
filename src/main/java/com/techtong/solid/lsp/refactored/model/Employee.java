@@ -1,6 +1,6 @@
 package com.techtong.solid.lsp.refactored.model;
 
-public abstract class Employee implements IEmployee, EmployeeBonus {
+public abstract class Employee implements IEmployee {
     private final int id;
     private final String name;
 

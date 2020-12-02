@@ -1,8 +1,6 @@
 package com.techtong.solid.lsp.refactored.model;
 
-import com.techtong.solid.lsp.refactored.model.Employee;
-
-public class TemporaryEmployee extends Employee {
+public class TemporaryEmployee extends Employee implements EmployeeBonusEligible{
 
     public TemporaryEmployee(int id, String name) {
         super(id, name);
