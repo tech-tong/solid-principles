@@ -8,7 +8,7 @@ public class PermanentEmployee extends Employee{
 
     @Override
     public boolean isEligibleForInsurance() {
-        return false;
+        return true;
     }
 
     @Override
