@@ -12,20 +12,20 @@ public class Main {
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME) ;
 
     public static void main(String[] args){
-        List<EmployeeBonusEligible> employees = new ArrayList<>();
-        employees.add( new PermanentEmployee(1, "Sabbir"));
-        employees.add( new TemporaryEmployee(2, "Sazzad"));
+        List<EmployeeBonusEligible> employees = List.of(
+                new PermanentEmployee(1, "Sabbir"),
+                new TemporaryEmployee(2, "Sazzad"));
 
         for( EmployeeBonusEligible employee : employees ){
             System.out.println(employee.toString() + " Employee Bonus : " + employee.calculateBonus(1000));
         }
 
         System.out.println("----------");
-        List<IEmployee> employeesOnly = new ArrayList<>();
-
-        employeesOnly.add( new PermanentEmployee(1, "Sabbir"));
-        employeesOnly.add( new TemporaryEmployee(2, "Sazzad"));
-        employeesOnly.add( new ContractEmployee(3, "Abcdef"));
+        List<IEmployee> employeesOnly = List.of(
+                new PermanentEmployee(1, "Sabbir"),
+                new TemporaryEmployee(2, "Sazzad"),
+                new ContractEmployee(3, "Abcdef")
+        );
 
         for( IEmployee employee : employeesOnly ){
             System.out.println(employee.toString() + " Employee is eligible for Insurance : " + employee.isEligibleForInsurance());
