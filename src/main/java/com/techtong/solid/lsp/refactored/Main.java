@@ -17,14 +17,10 @@ public class Main {
         employees.add( new TemporaryEmployee(2, "Sazzad"));
 
         for( EmployeeBonusEligible employee : employees ){
-            try {
-                System.out.println(employee.toString() + " Employee Bonus : " + employee.calculateBonus(1000));
-            }catch (UnsupportedOperationException exception) {
-             LOGGER.log(Level.SEVERE, " This employee is not eligible for bonus");
-            }
+            System.out.println(employee.toString() + " Employee Bonus : " + employee.calculateBonus(1000));
         }
 
-        System.out.println();
+        System.out.println("----------");
         List<IEmployee> employeesOnly = new ArrayList<>();
 
         employeesOnly.add( new PermanentEmployee(1, "Sabbir"));
@@ -32,13 +28,7 @@ public class Main {
         employeesOnly.add( new ContractEmployee(3, "Abcdef"));
 
         for( IEmployee employee : employeesOnly ){
-            try {
-                System.out.println(employee.toString() + " Employee is eligible for Insurance : " + employee.isEligibleForInsurance());
-            }catch (UnsupportedOperationException exception) {
-                LOGGER.log(Level.SEVERE, " This employee is not eligible for bonus");
-            }
+            System.out.println(employee.toString() + " Employee is eligible for Insurance : " + employee.isEligibleForInsurance());
         }
-
-
     }
 }
